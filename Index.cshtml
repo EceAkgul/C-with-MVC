@@ -1,0 +1,32 @@
+@using Karabuk_Dinamik.Models.Entity
+@model List<PRODUCT>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Default/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>CATEGORY</th>
+        <th>PRICE</th>
+        <th>STOCK</th>
+    </tr>
+
+
+            @foreach (var p in Model)
+        {
+    <tr>
+        <td>@p.PRODUCTID</td>
+        <td>@p.PRODUCT_NAME</td>
+        <td>@p.PRODUCT_CATEGORY</td>
+        <td>@p.PRODUCT_PRICE</td>
+        <td>@p.PRODUCT_STOCK</td>
+    </tr>
+            }
+
+       
+    </table>
+<a href="/Product/ProductAdd/" class="btn btn-primary">Product Add</a>
+
