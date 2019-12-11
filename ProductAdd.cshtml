@@ -1,0 +1,17 @@
+@model Karabuk_Dinamik.Models.Entity.PRODUCT
+@{
+    ViewBag.Title = "ProductAdd";
+    Layout = "~/Views/Default/_Layout.cshtml";
+}
+    <form method="post" class="form-group">
+        <div>
+            <label>Product Name</label>
+            <input type="text" name="PRODUCT_NAME" />
+        </div>
+        <div>
+            <label>Product Stock</label>
+            <input type="text" name="PRODUCT_STOCK" />
+        </div>
+        <button>Save Product</button>
+    </form>
+
